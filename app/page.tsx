@@ -32,6 +32,7 @@ export default async function Home() {
               </p>
             </div>
           ) : (
+            //@ts-ignore
             tasks.map((task) => <TaskItem key={task._id.toString()} task={task} />)
           )}
         </div>

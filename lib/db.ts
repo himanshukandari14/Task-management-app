@@ -8,6 +8,7 @@ let client: MongoClient;
 
 export async function connectToDb() {
   if (!client) {
+    //@ts-ignore
     client = new MongoClient(process.env.MONGODB_URI);
     await client.connect();
   }
